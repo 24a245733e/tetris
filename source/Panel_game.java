@@ -10,54 +10,46 @@ import java.awt.event.KeyListener;
 import com.tetris.gui.*;
 
 public class Panel_game extends Panel_grand{
-    static final int PERIOD_PLAYER = 100;
-    public int Difficulty = 1;
-    public int PERIOD_GAME = 10/Difficulty;
+
     public int iterator;
     public String message;
     private Gamefield gf;
-
+    private int block_size = 33;
     ArrayList<Tetromino> tetrominoes = new ArrayList<Tetromino>();
 
 
-    public void main(){
+    // public void main(){
+    //
+    //
+    //     gf = new Gamefield();
+    //     kla.AddObserver(gf);
+    //     gf.init_rows();
+    //
+    //     gf.add_test_tetromino();
+    //     while (gf.GAME_RUNNING) {
+    //         if (gf.if_fix_tetno()){
+    //             gf.add_test_tetromino();
+    //         }
+    //
+    //         for (int i = 0; i < PERIOD_GAME; i++){
+    //             gf.choose_action();
+    //             delay(PERIOD_PLAYER);
+    //             repaint();
+    //         }
+    //         gf.move_down();
+    //         repaint();
+    //         System.out.println(String.format("game running"));
+    //     }
+    //
+    // }
 
 
-        gf = new Gamefield();
-        kla.AddObserver(gf);
-        gf.init_rows();
-
-        gf.add_test_tetromino();
-        while (gf.GAME_RUNNING) {
-            if (gf.if_fix_tetno()){
-                gf.add_test_tetromino();
-            }
-
-            for (int i = 0; i < PERIOD_GAME; i++){
-                gf.choose_action();
-                delay(PERIOD_PLAYER);
-                repaint();
-            }
-            gf.move_down();
-            repaint();
-            System.out.println(String.format("game running"));
-        }
-
-    }
-
-    public static void delay(int time) {
-        long endTime = System.currentTimeMillis() + time;
-        while (System.currentTimeMillis() < endTime)
-        {
-            // do nothing
-        }
-    }
 
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        doDrawing(g);
+        // doDrawing(g);
     }
 
 

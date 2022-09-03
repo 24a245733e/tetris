@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import com.tetris.ui.*;
 import com.tetris.gui.*;
+import com.tetris.tetrominoes.*;
 public class Gamefield implements Observer{
 
     private final int GAME_DURATION = 1600;

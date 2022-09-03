@@ -5,9 +5,10 @@ import java.awt.*;
 import java.util.ArrayList; // import the ArrayList class
 import java.util.Random;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+// import java.awt.event.KeyListener;
+import com.tetris.ui.*;
 
-public class Panel_grand extends JPanel implements Observer{
+public class Panel_grand extends JPanel{
 
     public KeyListenerExample kla;
     public int coord_x_0 = 0;
@@ -18,15 +19,14 @@ public class Panel_grand extends JPanel implements Observer{
     public Panel_grand(){
         super();
         this.setBounds(coord_x_0, coord_y_0, width, height);
-        // this.setBackground(Color.decode("#AA9999"));
         this.setBackground(color);
     }
-    public void update(KeyEvent keyEvent)
-    {
-    }
-    public void addkle(KeyListenerExample kl) {
-        kla = kl;
-    }
+    // public void update(KeyEvent keyEvent)
+    // {
+    // }
+    // public void addkle(KeyListenerExample kl) {
+    //     kla = kl;
+    // }
 
 
 }

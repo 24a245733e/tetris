@@ -1,4 +1,4 @@
-package com.tetris;
+package com.tetris.tetrominoes;
 
 public class Tet_no_T_shape extends Tet_no{
     private void config () {

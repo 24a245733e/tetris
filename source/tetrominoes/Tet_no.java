@@ -1,4 +1,4 @@
-package com.tetris;
+package com.tetris.tetrominoes;
 
 public class Tet_no{
     public int x1, y1, x2, y2, x3, y3, x4, y4;
