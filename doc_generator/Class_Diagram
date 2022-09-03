@@ -1,0 +1,71 @@
+@startuml
+Main o-- JFrame
+Main o-- JPanel
+Main o-- Panel_left
+Main o-- KeyListenerExample
+Main : main()
+
+Panel_left --|> JPanel
+Panel_left --|> Observer : implements
+Panel_left o-- Gamefield
+Panel_left : update()
+Panel_left : addkle()
+Panel_left : main()
+Panel_left : delay()
+Panel_left : paintComponent() : @Override
+Panel_left : paint_empty()
+Panel_left : paint_full()
+Panel_left : doDrawing()
+
+
+Gamefield --|> Observer : implements
+Gamefield o-- Gamefield_row
+Gamefield_row o-- Gamefield_cell
+Gamefield o-- Tet_no
+Gamefield : init_rows()
+Gamefield : print()
+Gamefield : update()
+Gamefield : check_rows()
+Gamefield : add_test_tetromino()
+Gamefield : tet_off()
+Gamefield : tet_on()
+Gamefield : move_test()
+Gamefield : choose_action()
+Gamefield : move_right()
+Gamefield : move_left()
+Gamefield : move_up()
+Gamefield : check_down_place()
+Gamefield : move_down()
+Gamefield : action()
+Gamefield : clear_row()
+Gamefield : play()
+Gamefield : stop()
+
+
+Gamefield_row : cells
+Gamefield_row : check()
+Gamefield_row : ROW_LENGTH
+Gamefield_row : set
+Gamefield_cell : vacant
+Gamefield_cell : on()
+Gamefield_cell : off()
+Gamefield_cell : if_vacant()
+
+Tet_no : x1
+Tet_no : x2
+Tet_no : x3
+Tet_no : x4
+Tet_no : y1
+Tet_no : y2
+Tet_no : y3
+Tet_no : y4
+Tet_no : config()
+Tet_no : Tet_no()
+Tet_no : move_down()
+Tet_no : move_up()
+Tet_no : move_left()
+Tet_no : move_right()
+
+KeyListenerExample --|> Observable : implements
+KeyListenerExample --|> KeyListener : implements
+@enduml

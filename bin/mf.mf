@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Package: com.tetris
+Main-Class: com.tetris.Main

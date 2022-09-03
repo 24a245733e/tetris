@@ -1,0 +1,6 @@
+digraph {
+	a [shape=box]
+	b [shape=diamond]
+	jopa [shape=parallelogram]
+	a -> b
+}

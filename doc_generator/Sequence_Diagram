@@ -1,0 +1,20 @@
+@startuml
+Main -> frame : JFrame()
+Main -> panel_l : Panel_left()
+Main -> panel_r : JPanel()
+
+Main -> panel_l : main()
+panel_l -> gf : Gamefield()
+panel_l -> gf : init_rows()
+panel_l -> gf : add_test_tetromino()
+panel_l -> gf : choose_action()
+panel_l -> gf : repaint()
+panel_l -> gf : doDrawing()
+panel_l -> gf : paint_full()
+panel_l -> gf : paint_empty()
+
+gf -> active_tet_no : Tet_no()
+gf -> gf : tet_on()
+gf -> choose_action() : move_up(), move_down(), move_left(), move_right() 
+
+@enduml
