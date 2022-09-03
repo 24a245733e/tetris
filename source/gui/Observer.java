@@ -1,4 +1,4 @@
-package com.tetris;
+package com.tetris.gui;
 
 import java.awt.event.KeyEvent;
 

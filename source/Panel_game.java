@@ -7,30 +7,18 @@ import java.util.Random;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Panel_game extends JPanel implements Observer{
+import com.tetris.gui.*;
+
+public class Panel_game extends Panel_grand{
     static final int PERIOD_PLAYER = 100;
     public int Difficulty = 1;
     public int PERIOD_GAME = 10/Difficulty;
     public int iterator;
     public String message;
     private Gamefield gf;
-    KeyListenerExample kla;
 
     ArrayList<Tetromino> tetrominoes = new ArrayList<Tetromino>();
-    public Panel_game(){
-        super();
-        this.setBounds(0, 0, 320, 480);
-        this.setBackground(Color.decode("#AA9999"));
-    }
-    // Observer observer;
-    public void update(KeyEvent keyEvent)
-    {
-        System.out.println(String.format("SS: %d", keyEvent.getKeyCode()));
-       //do whatever here when key event occurs
-    }
-    public void addkle(KeyListenerExample kl) {
-        kla = kl;
-    }
+
 
     public void main(){
 
@@ -41,8 +29,6 @@ public class Panel_game extends JPanel implements Observer{
 
         gf.add_test_tetromino();
         while (gf.GAME_RUNNING) {
-            // listener.test_1();
-            // gf.move_test();
             if (gf.if_fix_tetno()){
                 gf.add_test_tetromino();
             }
