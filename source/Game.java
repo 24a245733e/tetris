@@ -11,8 +11,10 @@ import javax.swing.Action;
 import javax.swing.JComponent;
 import javax.swing.KeyStroke;
 import java.awt.event.ActionEvent;
-
-public class Game extends JComponent implements Observer{
+import java.awt.event.*;
+import javax.swing.*;
+// public class Game extends JComponent implements Observer{
+public class Game extends JComponent{
     public GameFrame frame;
     public Panel_game panel_game;
     static final int PERIOD_PLAYER = 100;
@@ -48,20 +50,19 @@ public class Game extends JComponent implements Observer{
 
 
     public void new_game(){
-        Action anAction = new AbstractAction() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(String.format("f2"));
-            }
-        };
+        // Action anAction = new AbstractAction() {
+        //     public void actionPerformed(ActionEvent e) {
+        //         System.out.println(String.format("f2"));
+        //     }
+        // };
         Gamefield gf = new Gamefield();
         // kl = new KeyListenerExample();
         // kl.AddObserver(this);
-        this.getInputMap().put(KeyStroke.getKeyStroke("F2"),
-                            "doSomething");
 
-        this.getActionMap().put("doSomething",
-                             anAction);
-        add(this);
+        //
+        // this.getActionMap().put("doSomething",
+        //                      anAction);
+        // add(this);
         // while (true) {
         //     delay(500);
         //     // System.out.println("running...");
