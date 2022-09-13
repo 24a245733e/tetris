@@ -19,7 +19,11 @@ public class Gamefield implements Observer{
     public boolean active_tet_no_set;
     public int keyCode;
     public int row_length;
-
+     
+    public Gamefield () {
+        super();
+        System.out.println(String.format("Gamefield created"));
+    }
     public void init_rows() {
         for (int row_counter = 0; row_counter <= ROW_QNTT; row_counter++) {
             print("row(%d) added", row_counter);

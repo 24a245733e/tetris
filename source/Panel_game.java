@@ -15,9 +15,18 @@ public class Panel_game extends Panel_grand{
     public String message;
     private Gamefield gf;
     private int block_size = 33;
+    public Color color = Color.decode("#beede9"); //cyan
     ArrayList<Tetromino> tetrominoes = new ArrayList<Tetromino>();
+    public Panel_game(){
+        super();
+        this.setBounds(coord_x_0, coord_y_0, width, height);
+        this.setBackground(color);
+    }
 
-
+    public void draw_gf(Gamefield gf1) {
+        gf = gf1;
+        // doDrawing();
+    }
     // public void main(){
     //
     //
@@ -49,7 +58,7 @@ public class Panel_game extends Panel_grand{
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // doDrawing(g);
+        doDrawing(g);
     }
 
 

@@ -56,6 +56,9 @@ public class Game extends JComponent{
         //     }
         // };
         Gamefield gf = new Gamefield();
+        gf.init_rows();
+        gf.add_test_tetromino();
+        panel_game.draw_gf(gf);
         // kl = new KeyListenerExample();
         // kl.AddObserver(this);
 
@@ -69,9 +72,7 @@ public class Game extends JComponent{
         // }
         // this.addKeyListener(kl);
         // this.AddObserver(gf);
-        // gf.init_rows();
         //
-        // gf.add_test_tetromino();
         // while (gf.GAME_RUNNING) {
         //     if (gf.if_fix_tetno()){
         //         gf.add_test_tetromino();
