@@ -58,7 +58,7 @@ public class Panel_game extends Panel_grand{
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        doDrawing(g);
+        render_gamefield(g);
     }
 
 
@@ -71,7 +71,7 @@ public class Panel_game extends Panel_grand{
         g.fillRect(x, y, 33, 33);
     }
 
-    public void doDrawing(Graphics g) {
+    public void render_gamefield(Graphics g) {
         g.setColor(Color.decode("#FFFFFF"));
         g.fillRect(0, 0, 10000, 10000);
         // System.out.println(String.format("object %s", gf.field));

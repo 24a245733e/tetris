@@ -59,8 +59,20 @@ public class Game extends JComponent{
         panel_game.add_gf(gf);
         gf.init_rows();
         gf.add_test_tetromino();
-        gf.move_down();
-        gf.move_right();
+        while (gf.GAME_RUNNING) {
+            if (gf.if_fix_tetno()){
+                gf.add_test_tetromino();
+            }
+
+            for (int i = 0; i < PERIOD_GAME; i++){
+                // gf.choose_action();
+                delay(PERIOD_PLAYER);
+                // repaint();
+            }
+            gf.move_down();
+            // repaint();
+            System.out.println(String.format("move_down"));
+        }
         // kl = new KeyListenerExample();
         // kl.AddObserver(this);
 
