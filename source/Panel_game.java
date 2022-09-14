@@ -23,7 +23,7 @@ public class Panel_game extends Panel_grand{
         this.setBackground(color);
     }
 
-    public void draw_gf(Gamefield gf1) {
+    public void add_gf(Gamefield gf1) {
         gf = gf1;
         // doDrawing();
     }

@@ -56,9 +56,11 @@ public class Game extends JComponent{
         //     }
         // };
         Gamefield gf = new Gamefield();
+        panel_game.add_gf(gf);
         gf.init_rows();
         gf.add_test_tetromino();
-        panel_game.draw_gf(gf);
+        gf.move_down();
+        gf.move_right();
         // kl = new KeyListenerExample();
         // kl.AddObserver(this);
 
